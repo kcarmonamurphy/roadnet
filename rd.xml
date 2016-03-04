@@ -1,0 +1,18 @@
+<network>
+	<intersection>
+		<road>
+		</road>
+		<avenue>
+		</avenue>
+		<street>
+			<stretch>
+			</stretch>
+			<intersection>
+				<street>
+				</street>
+			</intersection>
+			<stretch>
+			</stretch>
+		</street>
+	</intersection>
+</network>
