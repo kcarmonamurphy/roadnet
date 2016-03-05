@@ -1,4 +1,4 @@
-\documentclass{article}
+\documentclass{article}% ===> this file was generated automatically by noweave --- better not edit it
 \usepackage{graphicx, listings, noweb}
 \lstset{language=XML}
 
@@ -28,7 +28,7 @@ HTML will be used as the output representation because it is a very widely avail
 
 The compiler itself will be written in Ruby in order to take advantage of the excellent Nokogiri gem which makes the task of parsing elements in XML and HTML files a breeze. In the implementation, Nokogiri will parse the source XML file and create a token tree, which will then be manipulated by Ruby.\\
 
-Finally, noweb is the Literate Programming tool being used in the development of \textbf{roadnet}. noweb is language-agnostic, and outputs to either \LaTeX{} or HTML.
+Finally, noweb is the Literate Programming tool being used in the development of \textbf{roadnet}. noweb is language-agnostic, and outputs to either \LaTeX{} or HTML. 
 
 \section{Resources}
 Various resources will be consulted over the course of the development of the tool. Primarly, the Internet will be of greatest help while I figure out the workings of Nokogiri and Ruby. Once I'm able to retrieve a syntax tree is from a file, I'll need to shift my focus and consult the notes on context-free grammars and EBNF chains from class in order to create rules for the semantics validator. Finally, my trusty brain, let's hope, will pave the way for an efficient implementation of the embedded CSS styles that will be used to give structure to the outputted HTML.\\
@@ -49,34 +49,32 @@ Resources to be consulted:
 \end{itemize}
 
 \section{Implementation \& Testing}
-
-\subsection{XML example}
-The below XML code shows a very rudimentary code structure that describes a road network of an intersection that is flanked by a road, an avenue, and a street. The street travels for a bit (stretch) followed by an intersection crossed by another street. The same street then continues for a little bit longer.
+Assuming the following XML code:
 
 \begin{lstlisting}
+\nwfilename{weave.nw}
+
+\nwixlogsorted{c}{{name}{NW2dVWbn-46kYPR-1}{\nwixd{NW2dVWbn-46kYPR-1}}}%
+\nwbegincode{1}\sublabel{NW2dVWbn-46kYPR-1}\nwmargintag{{\nwtagstyle{}\subpageref{NW2dVWbn-46kYPR-1}}}\moddef{name~{\nwtagstyle{}\subpageref{NW2dVWbn-46kYPR-1}}}\endmoddef\nwstartdeflinemarkup\nwenddeflinemarkup
 <network>
-	<intersection>
-		<road>
-		</road>
-		<avenue>
-		</avenue>
-		<street>
-			<stretch>
-			</stretch>
-			<intersection>
-				<street>
-				</street>
-			</intersection>
-			<stretch>
-			</stretch>
-		</street>
-	</intersection>
+        <intersection>
+                <road>
+                </road>
+                <avenue>
+                </avenue>
+                <street>
+                        <stretch>
+                        </stretch>
+                        <intersection>
+                                <street>
+                                </street>
+                        </intersection>
+                        <stretch>
+                        </stretch>
+                </street>
+        </intersection>
 </network>
-\end{lstlisting}
+\\end\{lstlisting\}
 
-Of course, attributes will be used to specify the length of the stretches, as well as other features of the street such as number of lanes and lane width. Attributes for an intersection will specify road angle offsets, and turning radii, among other things. The code expects that there is at least one root intersection. One major limitation of the XML representation is that all roads are diverging - that is no cycles can be formed in the network given the current design.
-
-\subsection{Verification}
-Testing can be done using a tool such as ANTLR. Otherwise, simple test tokens will have to be produced by the parser and validated before moving onto building the HTML/CSS output engine.
-
-\end{document}
+\\end\{document\}
+\nwnotused{name}\nwendcode{}
