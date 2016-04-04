@@ -1,18 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <network>
 	<intersection>
-		<road>
-		</road>
-		<avenue>
+		<avenue>av
 		</avenue>
+		<road>rd
+		</road>
+		<road>rd
+		</road>
+		<road>rd
+		</road>
 		<street>
-			<stretch>
-			</stretch>
 			<intersection>
 				<street>
 				</street>
 			</intersection>
-			<stretch>
-			</stretch>
 		</street>
 	</intersection>
 </network>

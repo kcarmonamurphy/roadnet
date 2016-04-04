@@ -4,9 +4,11 @@ GEM
     mini_portile2 (2.0.0.rc2)
     nokogiri (1.6.7.2)
       mini_portile2 (~> 2.0.0.rc2)
+    solid_assert (0.7.3)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   nokogiri
+  solid_assert
