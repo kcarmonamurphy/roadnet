@@ -1,29 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <network intersection-radius="100">
-	<avenue>av
+	<avenue>
 	</avenue>
-	<road intersection-offset="180" angle-offset="-20" intersection-radius="20">rd
-				<road>
+	<road intersection-offset="180" angle-offset="-20" intersection-radius="20">
+		<road>
 		</road>
-			<street>
-			</street>
+		<street>
+		</street>
 	</road>
-	<road>rd
+	<road>
 	</road>
 	<road>
 			<street>
 			</street>
-		<street length="400" >
-			<road>
-			</road>
-			<road>
-			</road>
+			<street length="400" >
+				<road>
+				</road>
+				<road>
+				</road>
 			</street>
-		<street>
+			<street>
 			</street>
 	</road>
 	<street>
-		
 	</street>
 </network>

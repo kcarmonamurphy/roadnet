@@ -1,5 +1,6 @@
 \documentclass{article}
 \usepackage{graphicx, listings, noweb, textcomp, amsmath, xcolor, graphicx}
+\usepackage[letterpaper, margin=1in]{geometry}
 \lstset{
     frame=single,
     breaklines=true,
@@ -295,7 +296,6 @@ Lastly, the entire SVG graphic group (denoted by html.g) is shifted so that it a
 
 Finally, the HTML file is writte either to the default filename, or to the one specified on the command line, if applicable.\\
 
-<<somecode>>=
 \begin{lstlisting}[language=ruby]
 @width = @max_width - @min_width
 @height = @max_height - @min_height
@@ -318,18 +318,28 @@ The HTML SVG file output is quite ugly. It's composed of many SVG circles and li
 
 \includegraphics[width=12cm, height=9.5cm]{roadnet.png}
 
+\section{Testing \& Validation}
+
+Testing was completed simply by trying different combinations of xml tags in the XML input file, and verifying that the output looked sane. Malformed XML, as well as non-accepting XML tags and attributes were added, and the output was verified to show an error message in all cases. 
+
 \section{Future Considerations}
 
 The original plan was to draw the intersections such that no overlapping paths would exist. Because of time constraints and technical difficulties involving the storage and retrieval of x and y coordinates pushed onto a stack and then popped, this wasn't done. For the future, a nice feature would be to add Bezier curves to link each road link within an intersection to eachother, as in a real top-down view of a road network. SVG has native support for Bezier curves.
 
 \section{A note on noweb}
 
-Despite one of the major learning points of this project being the assimilation of a literate programming tool, in my case noweb, I would like to state why I have not used it and provide arguments in favour of a more modern approach.
+Despite one of the major learning points of this project being the assimilation of a literate programming tool, (in my case \em noweb\em\ was researched), I would like to state why I have not used it and provide arguments in favour of a more modern approach.\\
 
-noweb was conceived almost 30 years ago, shortly after Knuth's WEB appeared in computer science journals and made a small impact in the computer science community. Being a novel idea, it was hailed by many as a programming paradigm that would solve the perennial problem of not having enough comments in code, as well as forcing programmers to think and express their thoughts before coding.
+noweb was conceived almost 30 years ago, shortly after Knuth's WEB appeared in computer science journals and made a small impact in the computer science community. Being a novel idea, it was hailed by many as a programming paradigm that would solve the perennial problem of not having enough comments in code, or of comment quality not being up to par.\\
 
-It does accomplish those goals to a reasonable degree, but 
+It does accomplish those goals to a reasonable degree, as it forces the programmer to write out the logic and control flow of his/her program in natural language before writing any computer code. It also strives to create a single document which comprises both the code and the documentation in a portable format, which can be "weaved" into a documentation only file, or "tangled" into the resulting high-level computer code.\\
 
-Literate programming can be a good tool 
+This approach is no longer relevant in today's world because the way we document and write code has changed significantly since the time this was introduced. For starters, the Internet has revolutionized the way we access information about programming languages and any errors encountered using them. Gone or the days of sifting through manuals to find API calls or language specific constructs. Suffice it to perform a Google Search and have all this information at our fingertips. With literate programming, documentation is not presented in an easily accessible format and therefore cannot take advantage the Interenet's ability to find information easily.\\
+
+Next, while noweb is supposedly language agnostic, in that a .nw file can be "tangled" into any high level language, there are still certain "reserved" characters that must be excaped before this transformation can happen. In the Ruby program described above, the "\textlangle \textlangle" character is a noweb reserved construct, and because of this, several errors were raised when trying to "weave" or "tangle" the document into any sort of output. There are supposed escape characters that can be applied to mitigate this, however I firmly believe that any tool which requires modification of the source code to appease a documentation compiler is a poorly designed one.\\
+
+Finally, there is the argument of natural language being ambiguous, and not suited to describe programming constructs. Natural language within code can be good, but only when it augments what is already evident by the code. Literate programming seems to me like nailing two blocks of wood super glued together. The nails are unecessary, as the super glue already accurately holds together the wood. The same can be said of code with good comments which fill in missing gaps of information, rather than pre-describe everything the code does at a natural language level.\\
+
+The fact that literate programming is so rarely used, epecially in the practical, non-academic world should be the indicator to many that the last nail is already in the coffin - it's time to retire the notion of literate programming as a viable tool.
 
 \end{document}
