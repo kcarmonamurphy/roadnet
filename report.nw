@@ -322,14 +322,4 @@ The HTML SVG file output is quite ugly. It's composed of many SVG circles and li
 
 The original plan was to draw the intersections such that no overlapping paths would exist. Because of time constraints and technical difficulties involving the storage and retrieval of x and y coordinates pushed onto a stack and then popped, this wasn't done. For the future, a nice feature would be to add Bezier curves to link each road link within an intersection to eachother, as in a real top-down view of a road network. SVG has native support for Bezier curves.
 
-\section{A note on noweb}
-
-Despite one of the major learning points of this project being the assimilation of a literate programming tool, in my case noweb, I would like to state why I have not used it and provide arguments in favour of a more modern approach.
-
-noweb was conceived almost 30 years ago, shortly after Knuth's WEB appeared in computer science journals and made a small impact in the computer science community. Being a novel idea, it was hailed by many as a programming paradigm that would solve the perennial problem of not having enough comments in code, as well as forcing programmers to think and express their thoughts before coding.
-
-It does accomplish those goals to a reasonable degree, but 
-
-Literate programming can be a good tool 
-
 \end{document}

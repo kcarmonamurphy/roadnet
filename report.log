@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.3.4)  5 APR 2016 00:49
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.3.4)  5 APR 2016 01:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -512,26 +512,26 @@ Underfull \hbox (badness 10000) in paragraph at lines 296--297
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 316--317
+Underfull \hbox (badness 10000) in paragraph at lines 317--318
 
  []
 
 <images/roadnet.png, id=45, 895.345pt x 694.595pt>
 File: images/roadnet.png Graphic file (type png)
  <use images/roadnet.png>
-Package pdftex.def Info: images/roadnet.png used on input line 318.
+Package pdftex.def Info: images/roadnet.png used on input line 319.
 (pdftex.def)             Requested size: 341.43687pt x 270.30803pt.
 
-Overfull \hbox (11.43687pt too wide) in paragraph at lines 318--319
+Overfull \hbox (11.43687pt too wide) in paragraph at lines 319--320
 [][] 
  []
 
 [11] [12 <./images/roadnet.png>] (./report.aux) ) 
 Here is how much of TeX's memory you used:
- 4928 strings out of 494985
- 67216 string characters out of 6180357
+ 4929 strings out of 494985
+ 67222 string characters out of 6180357
  315704 words of memory out of 5000000
- 8078 multiletter control sequences out of 15000+600000
+ 8079 multiletter control sequences out of 15000+600000
  10025 words of font info for 36 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  38i,6n,51p,722b,1551s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -546,7 +546,7 @@ m/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr1
 are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texl
 ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on report.pdf (12 pages, 232663 bytes).
+Output written on report.pdf (12 pages, 233024 bytes).
 PDF statistics:
  95 PDF objects out of 1000 (max. 8388607)
  63 compressed objects within 1 object stream
