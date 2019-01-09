@@ -4,6 +4,8 @@
 
 Ruby based compiler for converting an XML description of a road network into an HTML/CSS visual representation. Completed as part of McMaster University course on Syntax Tools & Compilers.
 
+![roadnet](images/roadnet.png)
+
 ## Installing
 
 Ensure that you have a recent version of ruby installed.
@@ -29,7 +31,3 @@ Ensure that you have a recent version of ruby installed.
 ## How it Works
 
 The script descends the XML file recursively, drawing svg objects as it parses. It uses Nokogiri to parse XML and create the final HTML file.
-
-## Output
-
-![roadnet](images/roadnet.png)
